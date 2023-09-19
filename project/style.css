@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%);
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+.box{
+    width: 500px;
+    background-color: #fff;
+    padding: 40px 0px 40px 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+.toDo{
+  max-width: 499px;
+  margin-bottom: 20px;
+  display: flex;
+
+}
+.toDo h2,h2{
+    color: rgb(19, 165, 194);
+    font-family: 'Courier New', Courier, monospace;
+}
+.toDo img{
+    height: 35px;
+    width: 35px;
+    margin-left: 13px;
+}
+.input{
+   display: flex;
+   max-width: 499px;
+   position: relative;
+}
+#input{
+    padding: 10px 15px;
+    width: 90%;
+    border-radius: 18px;
+    border: 1px solid rgb(19, 165, 194);
+    outline: none;
+}
+::placeholder{
+    color: rgb(19, 165, 194);
+}
+.btn{
+    position: absolute;
+    right: 44px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 18px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,0.5) 0%, rgba(0,212,255,1) 100%);
+    top: 0px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+.btn:hover{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,0.8) 0%, rgba(0,212,255,1) 100%);
+}
+
+.box2{
+    width: 500px;
+    background-color: #fff;
+    padding: 40px 0px 40px 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+
+
+ul{
+    position: relative;
+}
+ul li{
+    list-style: none;
+    padding: 20px 0 0 26px;
+    user-select: none;
+    cursor: pointer;
+    font-size: 17px;
+    
+}
+ul li::before{
+    content: " ";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    border-radius: 50%;
+    border: 1px solid grey;
+}
+ul li span{
+    content: "";
+    position: absolute;
+    /* background-image: url(./assets/x-mark.png);
+    background-position: center;
+    background-size: cover; */
+    height: 20px;
+    width: 20px;
+    right: 39px;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 50%;
+    
+}
+
+ul li.select{
+    text-decoration: line-through;
+    color:  rgb(19, 165, 194);
+}
+ul li.select::before{
+    content: " ";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    border-radius: 50%;
+    background-image: url(./assets/check.png);
+    background-position: center;
+    background-size: cover;
+    border: none;
+}
+
+@media (max-width:500px){
+    .box,.box2,.toDo,.input{
+        width: 300px;
+    }
+    .box,.box2{
+        padding-left: 27px;
+    }
+    .btn{
+        right: 61px;
+    }
+    #input{
+        width: 80%;
+    }
+
+}
